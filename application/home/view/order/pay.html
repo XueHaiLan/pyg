@@ -1,0 +1,119 @@
+
+	<title>支付页</title>
+	
+
+    <link rel="stylesheet" type="text/css" href="/static/home/css/pages-pay.css" />
+
+
+	<div class="cart py-container">
+		<!--主内容-->
+		<div class="checkout py-container  pay">
+			<div class="checkout-tit">
+				<h4 class="tit-txt"><span class="success-icon"></span><span  class="success-info">订单提交成功，请您及时付款，以便尽快为您发货~~</span></h4>
+				<div class="paymark">
+					<span class="fl">请您在提交订单<em class="orange time">4小时</em>之内完成支付，超时订单会自动取消。订单号：<em>{$order.order_sn}</em></span>
+					<span class="fr"><em class="sui-lead">应付金额：</em><em  class="orange money">￥{$order.order_amount}</em></span>
+				</div>
+			</div>
+			
+			<div class="check-info">
+				<h4>重要说明：</h4>
+				<ol>
+					<li>品优购商城支付平台目前支持<span class="zfb">支付宝</span>支付方式。</li>
+					<li>其它支付渠道正在调试中，敬请期待。</li>
+					<li>为了保证您的购物支付流程顺利完成，请保存以下支付宝信息。</li>
+				</ol>
+				<h4>支付宝账户信息：（很重要，<span class="save">请保存！！！</span>）</h4>
+				<ul>
+					<li>支付帐号：duqthf1038@sandbox.com</li>
+					<li>密码：111111</li>
+					<li>支付密码：111111</li>
+				</ul>	
+			</div>
+			
+			
+			<div class="checkout-steps">
+				<!--收件人信息-->
+				<div class="step-tit">
+					<h5>支付平台</h5>
+				</div>
+				<div class="step-cont">
+					<ul class="payType">
+						{foreach $pay_type as $k=>$v}
+						<li pay_type="{$v.pay_code}" class="{if ($k=='alipay')}selected{/if}"><img src="{$v.logo}"></li>
+						{/foreach}
+					</ul>
+
+				</div>
+				<div class="hr"></div>
+
+
+
+				<div class="submit sui-text-center">
+					<a class="sui-btn btn-danger btn-xlarge"  target="_blank">立即支付</a>
+				</div>
+				<div class="otherpay">
+					<div class="step-tit">
+						<h5>其他支付方式</h5>
+					</div>
+					<div class="step-cont">
+						<span><a href="weixinpay.html" target="_blank">微信支付</a></span>
+						<span>中国银联</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<form action="{:url('home/order/topay')}" method="post" style="display: none">
+		<input type="hidden" name="id" value="{$order.id}">
+		<input type="hidden" name="pay_type" value="">
+	</form>
+
+
+	<!--购物车单元格 模板-->
+	<script type="text/template" id="tbar-cart-item-template">
+		<div class="tbar-cart-item" >
+			<div class="jtc-item-promo">
+				<em class="promo-tag promo-mz">满赠<i class="arrow"></i></em>
+				<div class="promo-text">已购满600元，您可领赠品</div>
+			</div>
+			<div class="jtc-item-goods">
+				<span class="p-img"><a href="#" target="_blank"><img src="{2}" alt="{1}" height="50" width="50" /></a></span>
+				<div class="p-name">
+					<a href="#">{1}</a>
+				</div>
+				<div class="p-price"><strong>¥{3}</strong>×{4} </div>
+				<a href="#none" class="p-del J-del">删除</a>
+			</div>
+		</div>
+	</script>
+	<!--侧栏面板结束-->
+	
+	<script type="text/javascript">
+		$('.submit').click(function (){
+			var pay_type='';
+			$('.payType li').each(function (i,v){
+				if($(v).attr('class')=='selected'){
+					// console.log(v);
+					pay_type=$(v).attr('pay_type');
+				}
+			})
+			console.log(pay_type);
+			//判断是否选中了充值方式
+			if(pay_type==''){
+				alert('请选择充值方式');return;
+			}
+			$('input[name=pay_type]').val(pay_type);
+			$('form').submit();
+		})
+		$(function(){
+			$("ul.payType li").click(function(){
+				$('ul.payType li').removeClass('selected');
+				$(this).addClass('selected');
+			})
+		})
+	</script>
+</body>
+
+</html>
