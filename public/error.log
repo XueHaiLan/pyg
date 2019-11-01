@@ -1,0 +1,48 @@
+[21-Sep-2019 21:29:25 PRC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in D:\pyg\application\common.php on line 79
+[21-Sep-2019 21:30:35 PRC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in D:\pyg\application\common.php on line 79
+[22-Sep-2019 15:12:14 PRC] PHP Warning:  Uncaught think\exception\ErrorException: require_once(../../API/qqConnectAPI.php): failed to open stream: No such file or directory in D:\pyg\application\home\controller\Login.php:118
+Stack trace:
+#0 D:\pyg\application\home\controller\Login.php(118): think\Error::appError(2, 'require_once(.....', 'D:\\pyg\\applicat...', 118, Array)
+#1 D:\pyg\application\home\controller\Login.php(118): require_once()
+#2 [internal function]: app\home\controller\Login->qqcallback()
+#3 D:\pyg\thinkphp\library\think\App.php(343): ReflectionMethod->invokeArgs(Object(app\home\controller\Login), Array)
+#4 D:\pyg\thinkphp\library\think\App.php(611): think\App::invokeMethod(Array, Array)
+#5 D:\pyg\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#6 D:\pyg\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#7 D:\pyg\thinkphp\start.php(19): think\App::run()
+#8 D:\pyg\public\index.php(25): require('D:\\pyg\\thinkphp...')
+#9 {main}
+  thrown in D:\pyg\application\home\controller\Login.php on line 118
+[22-Sep-2019 15:12:14 PRC] PHP Fatal error:  app\home\controller\Login::qqcallback(): Failed opening required '../../API/qqConnectAPI.php' (include_path='.;C:\php\pear') in D:\pyg\application\home\controller\Login.php on line 118
+[22-Sep-2019 15:12:47 PRC] PHP Warning:  Uncaught think\exception\ErrorException: require_once(/plugins/qq/API/qqConnectAPI.php): failed to open stream: No such file or directory in D:\pyg\application\home\controller\Login.php:118
+Stack trace:
+#0 D:\pyg\application\home\controller\Login.php(118): think\Error::appError(2, 'require_once(/p...', 'D:\\pyg\\applicat...', 118, Array)
+#1 D:\pyg\application\home\controller\Login.php(118): require_once()
+#2 [internal function]: app\home\controller\Login->qqcallback()
+#3 D:\pyg\thinkphp\library\think\App.php(343): ReflectionMethod->invokeArgs(Object(app\home\controller\Login), Array)
+#4 D:\pyg\thinkphp\library\think\App.php(611): think\App::invokeMethod(Array, Array)
+#5 D:\pyg\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#6 D:\pyg\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#7 D:\pyg\thinkphp\start.php(19): think\App::run()
+#8 D:\pyg\public\index.php(25): require('D:\\pyg\\thinkphp...')
+#9 {main}
+  thrown in D:\pyg\application\home\controller\Login.php on line 118
+[22-Sep-2019 15:12:47 PRC] PHP Fatal error:  app\home\controller\Login::qqcallback(): Failed opening required '/plugins/qq/API/qqConnectAPI.php' (include_path='.;C:\php\pear') in D:\pyg\application\home\controller\Login.php on line 118
+[22-Sep-2019 17:05:28 PRC] PHP Warning:  Uncaught think\exception\ErrorException: require_once(./plugins/ouath/service/AlipayOauthService.php): failed to open stream: No such file or directory in D:\pyg\application\home\controller\Login.php:161
+Stack trace:
+#0 D:\pyg\application\home\controller\Login.php(161): think\Error::appError(2, 'require_once(./...', 'D:\\pyg\\applicat...', 161, Array)
+#1 D:\pyg\application\home\controller\Login.php(161): require_once()
+#2 [internal function]: app\home\controller\Login->alicallback()
+#3 D:\pyg\thinkphp\library\think\App.php(343): ReflectionMethod->invokeArgs(Object(app\home\controller\Login), Array)
+#4 D:\pyg\thinkphp\library\think\App.php(611): think\App::invokeMethod(Array, Array)
+#5 D:\pyg\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#6 D:\pyg\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#7 D:\pyg\thinkphp\start.php(19): think\App::run()
+#8 D:\pyg\public\index.php(25): require('D:\\pyg\\thinkphp...')
+#9 {main}
+  thrown in D:\pyg\application\home\controller\Login.php on line 161
+[22-Sep-2019 17:05:28 PRC] PHP Fatal error:  app\home\controller\Login::alicallback(): Failed opening required './plugins/ouath/service/AlipayOauthService.php' (include_path='.;C:\php\pear') in D:\pyg\application\home\controller\Login.php on line 161
+[08-Oct-2019 17:22:50 PRC] PHP Notice:  Undefined index: REQUEST_METHOD in D:\pyg\public\index.php on line 14
+[08-Oct-2019 18:58:15 PRC] PHP Notice:  Undefined index: REQUEST_METHOD in D:\pyg\public\index.php on line 14
+[08-Oct-2019 18:59:54 PRC] PHP Notice:  Undefined index: REQUEST_METHOD in D:\pyg\public\index.php on line 18
+[08-Oct-2019 19:05:11 PRC] PHP Notice:  Undefined index: REQUEST_METHOD in D:\pyg\public\index.php on line 13
